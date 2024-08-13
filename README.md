@@ -8,7 +8,7 @@ This document provides a comprehensive overview of the updated ONT-cappable-seq 
 
 1. Install Snakemake by following the [instructions provided here](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html).
 
-2. Clone the ONT-cappable-seq2 repository to the desired location to obtain the Snakemake pipeline:
+2. Clone the ONT-cappable-seq repository to the desired location to obtain the Snakemake pipeline:
 
 ```bash
 git clone https://github.com/LoGT-KULeuven/ONT-cappable-seq.git
@@ -112,8 +112,6 @@ To run the Snakemake pipeline, use the following commands:
 cd ONT-cappable-seq
 snakemake --use-conda --cores 8
 ```
-During the initial run, the pipeline will install all necessary Conda packages, which may take some time. Subsequent runs will reuse this Conda environment.
-
 
 ## Changes to the pipeline as of 3/07/2024
 - updated conda environment env_read_mapping: cutadapt>=4.4, biopython
