@@ -1,0 +1,11 @@
+configfile: './config/config.yaml'
+include: 'rules/mapReads.smk'
+include: 'rules/annotateTSS.smk'
+include: 'rules/annotateTTS.smk'
+include: 'rules/determineTranscriptionBoundries.smk'
+rule all:
+    input: 
+        expand("results/processed_fastq/pychopper/pychopper_{sample}_{ident}/{sample}_{cond}_{ident}_full_length_output.fq", sample=config["Sample name"], ident=config["ID"], cond=["enriched", "control"]),
+        expand("results/transcript_boundaries/TSS_{sample}/TSS_{sample}_{ident}/TSS_seq_{sample}_enriched_{ident}.fa.out", sample=config["Sample name"], ident=config["ID"]),
+        expand("results/transcript_boundaries/TTS_{sample}/TTS_{sample}_{ident}/TTS_seq_{sample}_{ident}.fa.out", sample=config["Sample name"], ident=config["ID"]),
+        expand('results/alignments/BAM_files_{sample}/{sample}_{cond}_{ident}.sorted.bam.bai', sample=config["Sample name"], ident=config["ID"], cond=["enriched", "control"])

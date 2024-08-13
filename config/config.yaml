@@ -1,0 +1,31 @@
+Sample name: sampleID
+fasta file: input/genome_data/sampleID.fasta
+enriched fastq: input/fastq_data/sampleID_enriched.fastq
+control fastq: input/fastq_data/sampleID_control.fastq
+ID: group
+termseq alpha: 0.001
+
+cluster width:
+  TSS: 15
+  TTS: 30
+
+minimum coverage: 
+  enriched:
+    TSS: 25
+    TTS: 25
+  control:
+    TSS: 2
+    TTS: 5
+    
+peak alignment error: 2
+TSS Threshold: 1
+TTS threshold: 0.20
+
+TSS sequence extraction:
+  upstream: 40
+  downstream: 0
+
+TTS sequence extraction:
+  upstream: 30
+  downstream: 30
+

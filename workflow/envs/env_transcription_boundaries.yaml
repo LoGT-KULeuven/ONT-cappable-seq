@@ -1,0 +1,19 @@
+channels:
+  - defaults
+  - conda-forge
+  - bioconda
+dependencies:
+  - python
+  - pip
+  - setuptools
+  - scipy
+  - pandas==2.2.2
+  - numpy==1.26.4
+  - pybedtools
+  - idr
+  - deeptools
+  - samtools
+  - ncurses
+  - bedtools
+  - r-base
+  - r-dplyr
